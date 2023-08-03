@@ -21,7 +21,7 @@ module.exports = {
           mild: '#eb8c0a',
         },
         text: {
-          normal: '#525252',
+          normal: '#696666',
           orange: '#eb8c0a',
         },
       },
