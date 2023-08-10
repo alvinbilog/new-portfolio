@@ -26,6 +26,7 @@ module.exports = {
         },
       },
     },
+
     // dropShadow: {
     //   '3xl': '35px 35px 35px rgba(247,212,163)',
     // },
