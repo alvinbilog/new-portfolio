@@ -1,5 +1,4 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
 import { Work_Sans } from 'next/font/google';
 
 const WorkSans = Work_Sans({
