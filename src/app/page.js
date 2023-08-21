@@ -192,21 +192,21 @@ export default function Home() {
                   className="text-2xl text-orange-mild "
                 />
               </Link>
-              <Link href={'https://www.facebook.com/peashooter45/'}>
-                <FontAwesomeIcon
-                  icon={faLinkedin}
-                  className="text-2xl text-orange-mild"
-                />
-              </Link>{' '}
               <Link
                 href={
                   'https://www.linkedin.com/in/alvin-patrick-bilog-095ba6a8/'
                 }
               >
                 <FontAwesomeIcon
+                  icon={faLinkedin}
+                  className="text-2xl text-orange-mild"
+                />
+              </Link>
+              <Link href={'https://www.facebook.com/peashooter45/'}>
+                <FontAwesomeIcon
                   icon={faFacebook}
                   className="text-2xl text-orange-mild"
-                />{' '}
+                />
               </Link>
             </div>
           </div>
