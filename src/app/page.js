@@ -1,20 +1,20 @@
-"use client";
-import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSortDown } from "@fortawesome/free-solid-svg-icons";
+'use client';
+import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSortDown } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebook,
   faGithub,
   faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
-import Link from "next/link";
-import tools from "../data/data";
-import React from "react";
-import { motion } from "framer-motion";
+} from '@fortawesome/free-brands-svg-icons';
+import Link from 'next/link';
+import tools from '../data/data';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-gray-800">
       {/* Greeting Section */}
       <section className="px-10 flex flex-col justify-center items-center h-screen gap-8 -mt-4 md:gap-40  md:flex-row md:justify-center ">
         <motion.div
@@ -23,7 +23,7 @@ export default function Home() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="text-3xl font-semibold flex-col flex gap-1 text-orange-mild ">
+          <div className="text-3xl font-semibold flex-col flex gap-1 text-teal-mild ">
             <span className="">Hello!</span>
             <span> I'm Alvin. </span>
             <span> 👋 </span>
@@ -31,9 +31,9 @@ export default function Home() {
           <div className="flex-col flex gap-4 mt-4 text-text-normal font-medium">
             <p>
               Hi! I'm Alvin, a
-              <span className="text-orange-mild"> Fullstack Developer </span>
+              <span className="text-teal-mild"> Fullstack Developer </span>
               creating dynamic web experiences. Explore my projects and let's
-              <span className="text-orange-mild"> connect </span> to bring ideas
+              <span className="text-teal-mild"> connect </span> to bring ideas
               to life!⚡
             </p>
             <p>
@@ -48,7 +48,7 @@ export default function Home() {
           transition={{ duration: 0.5 }}
         >
           <Image
-            src="/images/avatoon.png"
+            src="/images/avatoon2.png"
             alt="my avatar icon"
             width={220}
             height={150}
@@ -60,12 +60,12 @@ export default function Home() {
       {/* Projects */}
       <section className="my-10 px-10">
         <div className="flex flex-col items-center">
-          <h3 className="text-orange-mild italic">Check My Projects</h3>
+          <h3 className="text-teal-mild italic">Check My Projects</h3>
           <h3>
             <FontAwesomeIcon
               icon={faSortDown}
               beatFade
-              className="text-orange-strong"
+              className="text-teal-strong"
             />
           </h3>
         </div>
@@ -111,9 +111,9 @@ export default function Home() {
       {/* About Me */}
       <section className="px-10 my-20 flex flex-col  justify-center items-center gap-4 md:gap-20 md:flex-row  md:my-36">
         <div className="md:w-2/6 ">
-          <h1 className="flex-col flex gap-1 text-3xl text-orange-mild font-semibold">
+          <h2 className="flex-col flex gap-1 text-3xl text-teal-mild font-semibold">
             About Me 🍊
-          </h1>
+          </h2>
           <div className="text-text-normal font-medium gap-4 ">
             <p className="my-8">
               I am Alvin, actively seeking a position to launch my career in the
@@ -134,7 +134,7 @@ export default function Home() {
         </div>
         <div className="py-6">
           <Image
-            src="/images/alvin.jpg"
+            src="/images/alvin1.jpg"
             alt="my avatar icon"
             width={220}
             height={150}
@@ -144,24 +144,24 @@ export default function Home() {
       </section>
       {/* tools */}
 
-      {/* <section className="container px-10 flex flex-col md:mx-auto lg:mx-auto"> */}
-      <section className="container flex flex-col justify-center px-10 ">
-        <div className=" ">
-          <h1 className="text-3xl  text-orange-mild font-semibold md:px-12">
+      <section className="px-10 md:px-20 md:mx-3 lg:px-40  xl:px-80 flex flex-col justify-start items-center ">
+        {' '}
+        <div className="px-10 md:px-20 md:mx-3">
+          <h2 className="text-3xl  text-teal-mild font-semibold">
             My tools 🔨
-          </h1>
+          </h2>
         </div>
-        <div className="my-8 mx-7">
-          <ul className="grid grid-cols-4  gap-x-11 gap-y-2  md:grid-cols-6 md:gap-x-11 md:gap-y-4 md:mx-28 lg:mx-60 text-center">
-            {tools.map(tool => (
-              <div key={tool.id} className="border-2 border-red-300">
-                <li className="h-18  col-span-2 flex flex-col items-center justify-center place-self-center text-xs ">
+        <div className="my-8">
+          <ul className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-x-28 lg:grid-cols-6 lg:gap-x-16 text-center">
+            {tools.map((tool) => (
+              <div key={tool.id} className="">
+                <li className="h-18 col-span-2 flex flex-col items-center justify-center place-self-center text-xs ">
                   <Image
                     src={tool.image}
                     width={50}
                     height={50}
                     alt={tool.alt}
-                    className="grayscale my-4"
+                    className="grayscale hover:grayscale-0 my-4"
                   />
                   <p className="text-text-normal"> {tool.name}</p>
                 </li>
@@ -170,12 +170,13 @@ export default function Home() {
           </ul>
         </div>
       </section>
-      <section className="">
+
+      <section className="px-10 my-8">
         <div className="flex flex-col md:flex-row md:justify-center items-center md:gap-28">
           <div className="flex flex-col md:w-1/4">
-            <h1 className="text-orange-mild text-3xl font-semibold my-4">
+            <h2 className="text-teal-mild text-3xl font-semibold my-4">
               Let's Connect! 📧
-            </h1>
+            </h2>
             <p className="mt-4 text-sm text-text-normal">
               Feel free to reach out to me for any inquiries, collaboration
               opportunities, or just to say hello! I'm excited to connect with
@@ -187,53 +188,53 @@ export default function Home() {
               className="my-8 flex flex-row justify-center  gap-24 
             "
             >
-              <Link href={"https://github.com/peashooter45"}>
+              <Link href={'https://github.com/peashooter45'}>
                 <FontAwesomeIcon
                   icon={faGithub}
-                  className="text-2xl text-orange-mild "
+                  className="text-2xl text-teal-mild "
                 />
               </Link>
               <Link
                 href={
-                  "https://www.linkedin.com/in/alvin-patrick-bilog-095ba6a8/"
+                  'https://www.linkedin.com/in/alvin-patrick-bilog-095ba6a8/'
                 }
               >
                 <FontAwesomeIcon
                   icon={faLinkedin}
-                  className="text-2xl text-orange-mild"
+                  className="text-2xl text-teal-mild"
                 />
               </Link>
-              <Link href={"https://www.facebook.com/peashooter45/"}>
+              <Link href={'https://www.facebook.com/peashooter45/'}>
                 <FontAwesomeIcon
                   icon={faFacebook}
-                  className="text-2xl text-orange-mild"
+                  className="text-2xl text-teal-mild"
                 />
               </Link>
             </div>
           </div>
-          <div className=" md:w-1/4">
+          <div className="">
             <form
               action="https://formspree.io/f/xnqkjwvb"
               method="POST"
-              className="w-72 flex flex-col justify-center gap-4 md:mt-44"
+              className="w-72 flex flex-col justify-center gap-4 md:mt-44 md:w-96 "
             >
               <input
                 type="email"
                 name="email"
                 required
                 placeholder="email"
-                className="border-solid border border-opacity-60 border-orange-mild rounded ps-2 text-sm h-8 "
+                className="border-solid border border-opacity-60 border-teal-mild rounded ps-2 text-sm h-8 p-4 md:text-lg"
               />
               <textarea
                 type="message"
                 name="message"
                 required
                 placeholder="message"
-                className="border-solid border border-opacity-60 border-orange-mild rounded px-2 text-sm h-48 p-2"
+                className="border-solid border border-opacity-60 border-teal-mild rounded px-2 text-sm h-48 p-2 md:text-lg"
               />
               <button
                 type="submit"
-                className="p-2 rounded bg-orange-strong w-16 text-white uppercase text-xs hover:bg-slate-100 hover:border-orange-mild hover:border hover:border-opacity-50 hover:text-orange-mild mb-20"
+                className="p-2 rounded bg-teal-strong w-16 text-white uppercase text-xs hover:bg-slate-100 hover:border-teal-mild hover:border hover:border-opacity-50 hover:text-teal-mild mb-20"
               >
                 Send
               </button>
@@ -241,6 +242,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <footer className="bg-gray-900 text-center py-4">
+        <div>
+          <p className="text-teal-mild">Created by Alvin</p>
+          <p className="text-xs text-gray-400">© 2023 All rights reserved.</p>
+        </div>
+      </footer>
     </main>
   );
 }

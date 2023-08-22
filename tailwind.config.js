@@ -14,15 +14,15 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        orange: {
-          fade: '#eb8c04',
-          strong: '#f2940c',
-          light: '#f7d4a3',
-          mild: '#eb8c0a',
+        teal: {
+          fade: '',
+          strong: '#0F766E',
+          light: '',
+          mild: '#5EEAD4',
         },
         text: {
-          normal: '#696666',
-          orange: '#eb8c0a',
+          normal: '#D1D5DB',
+          orange: '#2DD4BF',
         },
       },
     },
