@@ -1,24 +1,24 @@
-'use client';
-import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSortDown } from '@fortawesome/free-solid-svg-icons';
+"use client";
+import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSortDown } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
   faGithub,
   faLinkedin,
-} from '@fortawesome/free-brands-svg-icons';
-import Link from 'next/link';
-import tools from '../data/data';
-import React from 'react';
-import { motion } from 'framer-motion';
+} from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
+import tools from "../data/data";
+import React from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
     <main>
       {/* Greeting Section */}
-      <section className="flex flex-col justify-center items-center h-screen gap-8 -mt-4 md:gap-40  md:flex-row md:justify-center ">
+      <section className="px-10 flex flex-col justify-center items-center h-screen gap-8 -mt-4 md:gap-40  md:flex-row md:justify-center ">
         <motion.div
-          className="sm: w-96 md:w-2/6 "
+          className="md:w-2/6 "
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -58,7 +58,7 @@ export default function Home() {
         </motion.div>
       </section>
       {/* Projects */}
-      <section className="my-10 ">
+      <section className="my-10 px-10">
         <div className="flex flex-col items-center">
           <h3 className="text-orange-mild italic">Check My Projects</h3>
           <h3>
@@ -72,7 +72,7 @@ export default function Home() {
         <div>
           <div className="flex flex-col justify-center items-center  md:flex-row md:items-center md:gap-8">
             <motion.div
-              className="w-96 h-80 my-4 rounded-md bg-yellow-100/80 md:w-2/6"
+              className="w-72 h-80 my-4 rounded-md bg-yellow-100/80 md:w-2/6"
               initial={{ x: -500, opacity: 0, scale: 0.5 }}
               animate={{ x: 0, opacity: 1, scale: 1 }}
               transition={{ duration: 1.5 }}
@@ -80,7 +80,7 @@ export default function Home() {
               p1
             </motion.div>
             <motion.div
-              className="w-96 h-80 rounded-md bg-green-100/80 md:w-1/5"
+              className="w-72 h-80 rounded-md bg-green-100/80 md:w-1/5"
               initial={{ x: 500, opacity: 0, scale: 0.5 }}
               animate={{ x: 0, opacity: 1, scale: 1 }}
               transition={{ duration: 1.5 }}
@@ -90,7 +90,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col justify-center items-center  md:flex-row md:items-center md:gap-8 ">
             <motion.div
-              className="w-96 h-80 my-4 rounded-md bg-blue-100/80 md:md:w-1/5"
+              className="w-72 h-80 my-4 rounded-md bg-blue-100/80 md:md:w-1/5"
               initial={{ x: -500, opacity: 0, scale: 0.5 }}
               animate={{ x: 0, opacity: 1, scale: 1 }}
               transition={{ duration: 1.5 }}
@@ -98,7 +98,7 @@ export default function Home() {
               p3
             </motion.div>
             <motion.div
-              className="w-96 h-80 rounded-md bg-red-100/80 md:w-2/6"
+              className="w-72 h-80 rounded-md bg-red-100/80 md:w-2/6"
               initial={{ x: 500, opacity: 0, scale: 0.5 }}
               animate={{ x: 0, opacity: 1, scale: 1 }}
               transition={{ duration: 1.5 }}
@@ -109,8 +109,8 @@ export default function Home() {
         </div>
       </section>
       {/* About Me */}
-      <section className=" my-20 flex flex-col  justify-center items-center gap-4 md:gap-20 md:flex-row  md:my-36">
-        <div className="sm: w-96 md:w-2/6 ">
+      <section className="px-10 my-20 flex flex-col  justify-center items-center gap-4 md:gap-20 md:flex-row  md:my-36">
+        <div className="md:w-2/6 ">
           <h1 className="flex-col flex gap-1 text-3xl text-orange-mild font-semibold">
             About Me 🍊
           </h1>
@@ -144,17 +144,18 @@ export default function Home() {
       </section>
       {/* tools */}
 
-      <section className="container mx-auto ">
-        <div className="mx-7 lg:w-2/3 lg:mx-72 lg:pl-1.5 ">
-          <h2 className="text-3xl md:text-left   text-orange-mild font-semibold">
+      {/* <section className="container px-10 flex flex-col md:mx-auto lg:mx-auto"> */}
+      <section className="container flex flex-col justify-center px-10 ">
+        <div className=" ">
+          <h1 className="text-3xl  text-orange-mild font-semibold md:px-12">
             My tools 🔨
-          </h2>
+          </h1>
         </div>
         <div className="my-8 mx-7">
           <ul className="grid grid-cols-4  gap-x-11 gap-y-2  md:grid-cols-6 md:gap-x-11 md:gap-y-4 md:mx-28 lg:mx-60 text-center">
-            {tools.map((tool) => (
-              <div key={tool.id}>
-                <li className="w-16 h-18 col-span-2 flex flex-col items-center justify-center place-self-center text-xs ">
+            {tools.map(tool => (
+              <div key={tool.id} className="border-2 border-red-300">
+                <li className="h-18  col-span-2 flex flex-col items-center justify-center place-self-center text-xs ">
                   <Image
                     src={tool.image}
                     width={50}
@@ -169,7 +170,7 @@ export default function Home() {
           </ul>
         </div>
       </section>
-      <section className="w-auto mx-7">
+      <section className="">
         <div className="flex flex-col md:flex-row md:justify-center items-center md:gap-28">
           <div className="flex flex-col md:w-1/4">
             <h1 className="text-orange-mild text-3xl font-semibold my-4">
@@ -186,7 +187,7 @@ export default function Home() {
               className="my-8 flex flex-row justify-center  gap-24 
             "
             >
-              <Link href={'https://github.com/peashooter45'}>
+              <Link href={"https://github.com/peashooter45"}>
                 <FontAwesomeIcon
                   icon={faGithub}
                   className="text-2xl text-orange-mild "
@@ -194,7 +195,7 @@ export default function Home() {
               </Link>
               <Link
                 href={
-                  'https://www.linkedin.com/in/alvin-patrick-bilog-095ba6a8/'
+                  "https://www.linkedin.com/in/alvin-patrick-bilog-095ba6a8/"
                 }
               >
                 <FontAwesomeIcon
@@ -202,7 +203,7 @@ export default function Home() {
                   className="text-2xl text-orange-mild"
                 />
               </Link>
-              <Link href={'https://www.facebook.com/peashooter45/'}>
+              <Link href={"https://www.facebook.com/peashooter45/"}>
                 <FontAwesomeIcon
                   icon={faFacebook}
                   className="text-2xl text-orange-mild"
@@ -214,14 +215,14 @@ export default function Home() {
             <form
               action="https://formspree.io/f/xnqkjwvb"
               method="POST"
-              className="flex flex-col justify-center gap-4 md:mt-44"
+              className="w-72 flex flex-col justify-center gap-4 md:mt-44"
             >
               <input
                 type="email"
                 name="email"
                 required
                 placeholder="email"
-                className="border-solid border border-opacity-60 border-orange-mild rounded ps-2 text-sm h-8"
+                className="border-solid border border-opacity-60 border-orange-mild rounded ps-2 text-sm h-8 "
               />
               <textarea
                 type="message"
