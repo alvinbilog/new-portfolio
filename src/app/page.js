@@ -1,16 +1,16 @@
-'use client';
-import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSortDown } from '@fortawesome/free-solid-svg-icons';
+"use client";
+import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSortDown } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
   faGithub,
   faLinkedin,
-} from '@fortawesome/free-brands-svg-icons';
-import Link from 'next/link';
-import tools from '../data/data';
-import React from 'react';
-import { motion } from 'framer-motion';
+} from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
+import tools from "../data/data";
+import React from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -79,24 +79,28 @@ export default function Home() {
             >
               <div className="group relative w-full h-full">
                 <Image
-                  src="/assets/your-project-image.png" // Change this to your project image path
+                  src="/assets/issue-tracker.png"
                   alt="Your Project"
-                  layout="fill" // This makes the image cover the available space
+                  layout="fill"
                   objectFit="cover"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-75 transition duration-300 ease-in-out flex justify-center items-center">
                   <div className="hidden group-hover:flex flex-col items-center text-center">
                     <span className="text-xl text-white font-bold">
-                      Project Title
+                      Issue Tracker
                     </span>
                     <p className="text-sm text-white p-4">
-                      Short description of the project goes here. This is where
-                      you talk about the features and what this project is
-                      about.
+                      An application designed for tracking issues. It allows
+                      users to assign tasks, utilize charts for visualization,
+                      and offers filtering capabilities for better issue
+                      management.
+                    </p>
+                    <p className="text-sm text-white p-4">
+                      Next | TypeScript | Tailwind | Prisma | Radix UI
                     </p>
                     <div className="mt-4">
                       <Link
-                        href="your-live-project-link"
+                        href="https://issue-tracker-ruddy-six.vercel.app/"
                         passHref
                         target="_blank"
                         className="text-teal-200 bg-transparent border border-teal-200 hover:bg-teal-200 hover:text-white rounded px-4 py-2 mx-2 transition duration-300"
@@ -104,7 +108,7 @@ export default function Home() {
                         View Live
                       </Link>
                       <Link
-                        href="your-code-repository-link"
+                        href="https://github.com/peashooter45/issue-tracker"
                         passHref
                         target="_blank"
                         className="text-teal-200 bg-transparent border border-teal-200 hover:bg-teal-200 hover:text-white rounded px-4 py-2 mx-2 transition duration-300"
@@ -123,15 +127,48 @@ export default function Home() {
               animate={{ x: 0, opacity: 1, scale: 1 }}
               transition={{ duration: 1.5 }}
             >
-              <Link href={'https://issue-tracker-ruddy-six.vercel.app/'}>
+              <div className="group relative w-full h-full">
                 <Image
                   src="/assets/blogverse.png"
-                  alt="blogverse-preview"
-                  width={450}
-                  height={150}
-                  className="w-auto h-80 mx-auto rounded-md object-none"
+                  alt="Your Project"
+                  layout="fill"
+                  objectFit="cover"
                 />
-              </Link>
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-75 transition duration-300 ease-in-out flex justify-center items-center">
+                  <div className="hidden group-hover:flex flex-col items-center text-center">
+                    <span className="text-xl text-white font-bold">
+                      Blogverse
+                    </span>
+                    <p className="text-sm text-white p-4">
+                      Blogverse is a blogging platform where users can create
+                      and publish blog posts. It supports multimedia content,
+                      including videos and pictures, and integrates with
+                      Sanity.io for enhanced content management.
+                    </p>
+                    <p className="text-sm text-white p-4">
+                      Next | TypeScript | Tailwind | Sanity | Auth
+                    </p>
+                    <div className="mt-4">
+                      <Link
+                        href="https://blogverse-o0tlzrdhn-peashooter45.vercel.app/"
+                        passHref
+                        target="_blank"
+                        className="text-teal-200 bg-transparent border border-teal-200 hover:bg-teal-200 hover:text-white rounded px-4 py-2 mx-2 transition duration-300"
+                      >
+                        View Live
+                      </Link>
+                      <Link
+                        href="https://github.com/peashooter45/blogverse"
+                        passHref
+                        target="_blank"
+                        className="text-teal-200 bg-transparent border border-teal-200 hover:bg-teal-200 hover:text-white rounded px-4 py-2 mx-2 transition duration-300"
+                      >
+                        View Code
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </div>
           <div className="flex flex-col justify-center items-center  md:flex-row md:items-center md:gap-8 ">
@@ -141,15 +178,43 @@ export default function Home() {
               animate={{ x: 0, opacity: 1, scale: 1 }}
               transition={{ duration: 1.5 }}
             >
-              <Link href={'https://faceverse.vercel.app/'}>
+              <div className="group relative w-full h-full">
                 <Image
-                  src="/assets/blogverse.png"
-                  alt="blogverse-preview"
-                  width={450}
-                  height={150}
-                  className="w-auto h-80 mx-auto rounded-md object-none"
+                  src="/assets/oldportfolio.png"
+                  alt="Your Project"
+                  layout="fill"
+                  objectFit="cover"
                 />
-              </Link>
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-75 transition duration-300 ease-in-out flex justify-center items-center">
+                  <div className="hidden group-hover:flex flex-col items-center text-center">
+                    <span className="text-xl text-white font-bold">
+                      Old Portfolio
+                    </span>
+                    <p className="text-sm text-white p-4">
+                      This app serves as a portfolio, specifically tailored to
+                      showcase frontend development skills.
+                    </p>
+                    <div className="mt-4">
+                      <Link
+                        href="https://alvs-portfolio.netlify.app/"
+                        passHref
+                        target="_blank"
+                        className="text-teal-200 bg-transparent border border-teal-200 hover:bg-teal-200 hover:text-white rounded px-4 py-2 mx-2 transition duration-300"
+                      >
+                        View Live
+                      </Link>
+                      <Link
+                        href="https://github.com/peashooter45/portfolio"
+                        passHref
+                        target="_blank"
+                        className="text-teal-200 bg-transparent border border-teal-200 hover:bg-teal-200 hover:text-white rounded px-4 py-2 mx-2 transition duration-300"
+                      >
+                        View Code
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </motion.div>
             <motion.div
               className="w-72 h-80 rounded-md bg-red-100/80 md:w-2/6"
@@ -157,15 +222,59 @@ export default function Home() {
               animate={{ x: 0, opacity: 1, scale: 1 }}
               transition={{ duration: 1.5 }}
             >
-              <Link href={'https://alvs-portfolio.netlify.app/'}>
+              <div className="group relative w-full h-full">
                 <Image
-                  src="/assets/cm.png"
-                  alt="blogverse-preview"
-                  width={450}
-                  height={150}
-                  className="w-auto h-80 mx-auto rounded-md object-none"
+                  src="/assets/faceverse.png"
+                  alt="Your Project"
+                  layout="fill"
+                  objectFit="cover"
                 />
-              </Link>
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-75 transition duration-300 ease-in-out flex justify-center items-center">
+                  <div className="hidden group-hover:flex flex-col items-center text-center">
+                    <span className="text-xl text-white font-bold">
+                      Faceverse
+                    </span>
+                    <p className="text-sm text-white p-4">
+                      Faceverse is a social networking application. It provides
+                      features for connecting with friends, sharing updates, and
+                      engaging with a community.
+                    </p>
+                    <p className="text-sm text-white p-4">
+                      Next | TypeScript | Node | Express | MongoDb | Tailwind
+                    </p>
+                    <div className="mt-4">
+                      <div className="mb-5">
+                        <Link
+                          href="https://faceverse.vercel.app/"
+                          passHref
+                          target="_blank"
+                          className="text-teal-200 bg-transparent border border-teal-200 hover:bg-teal-200 hover:text-white rounded px-4 py-2 mx-2 transition duration-300"
+                        >
+                          View Live
+                        </Link>
+                      </div>
+                      <div className="flex justify-between">
+                        <Link
+                          href="https://github.com/peashooter45/faceverse-client"
+                          passHref
+                          target="_blank"
+                          className="text-teal-200 bg-transparent border border-teal-200 hover:bg-teal-200 hover:text-white rounded px-4 py-2 mx-2 transition duration-300 text-xs"
+                        >
+                          View Code Client
+                        </Link>
+                        <Link
+                          href="https://github.com/peashooter45/faceverse"
+                          passHref
+                          target="_blank"
+                          className="text-teal-200 bg-transparent border border-teal-200 hover:bg-teal-200 hover:text-white rounded px-4 py-2 mx-2 transition duration-300 text-xs"
+                        >
+                          View Code Backend
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -215,7 +324,7 @@ export default function Home() {
         </div>
         <div className="my-8">
           <ul className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-x-28 lg:grid-cols-6 lg:gap-x-16 text-center">
-            {tools.map((tool) => (
+            {tools.map(tool => (
               <div key={tool.id} className="">
                 <li className="h-18 col-span-2 flex flex-col items-center justify-center place-self-center text-xs ">
                   <Image
@@ -250,7 +359,7 @@ export default function Home() {
               className="my-8 flex flex-row justify-center  gap-24 
             "
             >
-              <Link href={'https://github.com/peashooter45'}>
+              <Link href={"https://github.com/peashooter45"}>
                 <FontAwesomeIcon
                   icon={faGithub}
                   className="text-2xl text-teal-mild "
@@ -258,7 +367,7 @@ export default function Home() {
               </Link>
               <Link
                 href={
-                  'https://www.linkedin.com/in/alvin-patrick-bilog-095ba6a8/'
+                  "https://www.linkedin.com/in/alvin-patrick-bilog-095ba6a8/"
                 }
               >
                 <FontAwesomeIcon
@@ -266,7 +375,7 @@ export default function Home() {
                   className="text-2xl text-teal-mild"
                 />
               </Link>
-              <Link href={'https://www.facebook.com/peashooter45/'}>
+              <Link href={"https://www.facebook.com/peashooter45/"}>
                 <FontAwesomeIcon
                   icon={faFacebook}
                   className="text-2xl text-teal-mild"
