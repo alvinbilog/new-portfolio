@@ -72,20 +72,66 @@ export default function Home() {
         <div>
           <div className="flex flex-col justify-center items-center  md:flex-row md:items-center md:gap-8">
             <motion.div
-              className="w-72 h-80 my-4 rounded-md bg-yellow-100/80 md:w-2/6"
+              className="w-72 h-80 my-4 rounded-md overflow-hidden shadow-lg bg-cover bg-center md:w-2/6"
               initial={{ x: -500, opacity: 0, scale: 0.5 }}
               animate={{ x: 0, opacity: 1, scale: 1 }}
               transition={{ duration: 1.5 }}
             >
-              p1
+              <div className="group relative w-full h-full">
+                <Image
+                  src="/assets/your-project-image.png" // Change this to your project image path
+                  alt="Your Project"
+                  layout="fill" // This makes the image cover the available space
+                  objectFit="cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-75 transition duration-300 ease-in-out flex justify-center items-center">
+                  <div className="hidden group-hover:flex flex-col items-center text-center">
+                    <span className="text-xl text-white font-bold">
+                      Project Title
+                    </span>
+                    <p className="text-sm text-white p-4">
+                      Short description of the project goes here. This is where
+                      you talk about the features and what this project is
+                      about.
+                    </p>
+                    <div className="mt-4">
+                      <Link
+                        href="your-live-project-link"
+                        passHref
+                        target="_blank"
+                        className="text-teal-200 bg-transparent border border-teal-200 hover:bg-teal-200 hover:text-white rounded px-4 py-2 mx-2 transition duration-300"
+                      >
+                        View Live
+                      </Link>
+                      <Link
+                        href="your-code-repository-link"
+                        passHref
+                        target="_blank"
+                        className="text-teal-200 bg-transparent border border-teal-200 hover:bg-teal-200 hover:text-white rounded px-4 py-2 mx-2 transition duration-300"
+                      >
+                        View Code
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </motion.div>
+
             <motion.div
               className="w-72 h-80 rounded-md bg-green-100/80 md:w-1/5"
               initial={{ x: 500, opacity: 0, scale: 0.5 }}
               animate={{ x: 0, opacity: 1, scale: 1 }}
               transition={{ duration: 1.5 }}
             >
-              p2
+              <Link href={'https://issue-tracker-ruddy-six.vercel.app/'}>
+                <Image
+                  src="/assets/blogverse.png"
+                  alt="blogverse-preview"
+                  width={450}
+                  height={150}
+                  className="w-auto h-80 mx-auto rounded-md object-none"
+                />
+              </Link>
             </motion.div>
           </div>
           <div className="flex flex-col justify-center items-center  md:flex-row md:items-center md:gap-8 ">
@@ -95,7 +141,15 @@ export default function Home() {
               animate={{ x: 0, opacity: 1, scale: 1 }}
               transition={{ duration: 1.5 }}
             >
-              p3
+              <Link href={'https://faceverse.vercel.app/'}>
+                <Image
+                  src="/assets/blogverse.png"
+                  alt="blogverse-preview"
+                  width={450}
+                  height={150}
+                  className="w-auto h-80 mx-auto rounded-md object-none"
+                />
+              </Link>
             </motion.div>
             <motion.div
               className="w-72 h-80 rounded-md bg-red-100/80 md:w-2/6"
@@ -103,7 +157,15 @@ export default function Home() {
               animate={{ x: 0, opacity: 1, scale: 1 }}
               transition={{ duration: 1.5 }}
             >
-              p4
+              <Link href={'https://alvs-portfolio.netlify.app/'}>
+                <Image
+                  src="/assets/cm.png"
+                  alt="blogverse-preview"
+                  width={450}
+                  height={150}
+                  className="w-auto h-80 mx-auto rounded-md object-none"
+                />
+              </Link>
             </motion.div>
           </div>
         </div>
@@ -142,10 +204,10 @@ export default function Home() {
           />
         </div>
       </section>
+
       {/* tools */}
 
       <section className="px-10 md:px-20 md:mx-3 lg:px-40  xl:px-80 flex flex-col justify-start items-center ">
-        {' '}
         <div className="px-10 md:px-20 md:mx-3">
           <h2 className="text-3xl  text-teal-mild font-semibold">
             My tools 🔨

@@ -30,7 +30,7 @@ var data = [
   {
     id: 105,
     name: 'Next JS',
-    image: '/assets/next.png',
+    image: '/assets/next3.png',
     alt: 'Next JS',
     type: 'frontend',
   },
