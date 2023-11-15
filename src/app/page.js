@@ -1,16 +1,16 @@
-"use client";
-import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSortDown } from "@fortawesome/free-solid-svg-icons";
+'use client';
+import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSortDown } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebook,
   faGithub,
   faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
-import Link from "next/link";
-import tools from "../data/data";
-import React from "react";
-import { motion } from "framer-motion";
+} from '@fortawesome/free-brands-svg-icons';
+import Link from 'next/link';
+import tools from '../data/data';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
@@ -245,7 +245,7 @@ export default function Home() {
                     <div className="mt-4">
                       <div className="mb-5">
                         <Link
-                          href="https://faceverse.vercel.app/"
+                          href="https://faceverse-client.vercel.app"
                           passHref
                           target="_blank"
                           className="text-teal-200 bg-transparent border border-teal-200 hover:bg-teal-200 hover:text-white rounded px-4 py-2 mx-2 transition duration-300"
@@ -324,7 +324,7 @@ export default function Home() {
         </div>
         <div className="my-8">
           <ul className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-x-28 lg:grid-cols-6 lg:gap-x-16 text-center">
-            {tools.map(tool => (
+            {tools.map((tool) => (
               <div key={tool.id} className="">
                 <li className="h-18 col-span-2 flex flex-col items-center justify-center place-self-center text-xs ">
                   <Image
@@ -359,7 +359,7 @@ export default function Home() {
               className="my-8 flex flex-row justify-center  gap-24 
             "
             >
-              <Link href={"https://github.com/peashooter45"}>
+              <Link href={'https://github.com/peashooter45'}>
                 <FontAwesomeIcon
                   icon={faGithub}
                   className="text-2xl text-teal-mild "
@@ -367,7 +367,7 @@ export default function Home() {
               </Link>
               <Link
                 href={
-                  "https://www.linkedin.com/in/alvin-patrick-bilog-095ba6a8/"
+                  'https://www.linkedin.com/in/alvin-patrick-bilog-095ba6a8/'
                 }
               >
                 <FontAwesomeIcon
@@ -375,7 +375,7 @@ export default function Home() {
                   className="text-2xl text-teal-mild"
                 />
               </Link>
-              <Link href={"https://www.facebook.com/peashooter45/"}>
+              <Link href={'https://www.facebook.com/peashooter45/'}>
                 <FontAwesomeIcon
                   icon={faFacebook}
                   className="text-2xl text-teal-mild"
