@@ -80,7 +80,7 @@ export default function Home() {
               <div className="group relative w-full h-full">
                 <Image
                   src="/assets/issue-tracker.png"
-                  alt="Your Project"
+                  alt="issue-tracker-homepage"
                   layout="fill"
                   objectFit="cover"
                 />
@@ -96,7 +96,7 @@ export default function Home() {
                       management.
                     </p>
                     <p className="text-sm text-white p-4">
-                      Next | TypeScript | Tailwind | Prisma | Radix UI
+                      Next | TypeScript | Tailwind | Prisma | Radix UI | SQL
                     </p>
                     <div className="mt-4">
                       <Link
@@ -130,7 +130,7 @@ export default function Home() {
               <div className="group relative w-full h-full">
                 <Image
                   src="/assets/blogverse.png"
-                  alt="Your Project"
+                  alt="blogverse-homepage"
                   layout="fill"
                   objectFit="cover"
                 />
@@ -181,7 +181,7 @@ export default function Home() {
               <div className="group relative w-full h-full">
                 <Image
                   src="/assets/oldportfolio.png"
-                  alt="Your Project"
+                  alt="old-portfolio-homepage"
                   layout="fill"
                   objectFit="cover"
                 />
@@ -225,7 +225,7 @@ export default function Home() {
               <div className="group relative w-full h-full">
                 <Image
                   src="/assets/faceverse.png"
-                  alt="Your Project"
+                  alt="faceverse-homepage"
                   layout="fill"
                   objectFit="cover"
                 />
