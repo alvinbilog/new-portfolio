@@ -84,5 +84,12 @@ var data = [
     alt: 'Git',
     type: 'backend',
   },
+  {
+    id: 114,
+    name: 'MySQL',
+    image: '/assets/mysql.png',
+    alt: 'Git',
+    type: 'db',
+  },
 ];
 export default data;
