@@ -78,6 +78,55 @@ export default function Home() {
           >
             <div className="group relative w-full h-full">
               <Image
+                src="/assets/zerphyr.png"
+                alt="Zerphyr-dashboard"
+                layout="fill"
+                objectFit="cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-75 transition duration-300 ease-in-out flex justify-center items-center">
+                <div className="hidden group-hover:flex flex-col items-center text-center">
+                  <span className="text-xl text-white font-bold">Zerphyr</span>
+                  <p className="text-sm text-white p-4">
+                    Is a powerful test management solution designed to
+                    streamline and enhance your software testing processes.
+                    Zephyr empowers teams to efficiently plan, track, and manage
+                    their testing efforts, from test case creation to execution
+                    and reporting.
+                  </p>
+                  <p className="text-sm text-white p-4">
+                    Next | TypeScript | Tailwind | Drizzle | Chart.js |
+                    PostgreSQL | Radix
+                  </p>
+                  <div className="mt-4">
+                    <Link
+                      href="https://zerphyr-pi.vercel.app/"
+                      passHref
+                      target="_blank"
+                      className="text-teal-200 bg-transparent border border-teal-200 hover:bg-teal-200 hover:text-white rounded px-4 py-2 mx-2 transition duration-300"
+                    >
+                      View Live
+                    </Link>
+                    <Link
+                      href="https://github.com/alvinbilog/Zerphyr"
+                      passHref
+                      target="_blank"
+                      className="text-teal-200 bg-transparent border border-teal-200 hover:bg-teal-200 hover:text-white rounded px-4 py-2 mx-2 transition duration-300"
+                    >
+                      View Code
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+          <motion.div
+            className="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 h-80 my-4 rounded-md overflow-hidden shadow-lg bg-cover bg-center"
+            initial={{ x: -500, opacity: 0, scale: 0.5 }}
+            animate={{ x: 0, opacity: 1, scale: 1 }}
+            transition={{ duration: 1.5 }}
+          >
+            <div className="group relative w-full h-full">
+              <Image
                 src="/assets/issue-tracker.png"
                 alt="issue-tracker-homepage"
                 layout="fill"
